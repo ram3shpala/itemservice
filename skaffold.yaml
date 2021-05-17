@@ -1,0 +1,11 @@
+apiVersion: skaffold/v2beta5
+kind: Config
+metadata:
+  name: itemservice
+build:
+  artifacts:
+  - image: ram3shpala/item-docker
+deploy:
+  kubectl:
+    manifests:
+    - deployment.yaml
